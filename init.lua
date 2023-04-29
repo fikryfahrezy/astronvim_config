@@ -44,6 +44,11 @@ return {
         opts.root_dir = require("lspconfig.util").root_pattern('tailwind.config.js', 'tailwind.config.ts')
 	return opts
       end,
+      unocss = function(opts)
+        opts.root_dir = require("lspconfig.util").root_pattern('unocss.config.js', 'unocss.config.ts', 'uno.config.js', 'uno.config.ts')
+	opts.autostart = false
+	return opts
+      end,
     },
     -- customize lsp formatting options
     formatting = {
